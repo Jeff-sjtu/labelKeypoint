@@ -97,7 +97,7 @@ class MainWindow(QMainWindow, WindowMixin):
     def __init__(self, filename=None, output=None):
         super(MainWindow, self).__init__()
         self.setWindowTitle(__appname__)
-        self.datadir = '/mnt/c/Users/ljf_l/Desktop/newAnno'
+        self.datadir = 'C:/Users/ljf_l/Desktop/coco_part/coco_part1'
         with open(self.datadir+'/annot.json') as data_file:
             self.annot = json.load(data_file)
             print("number of label set: %d" % len(self.annot))
@@ -171,9 +171,9 @@ class MainWindow(QMainWindow, WindowMixin):
         next = action('&Next', self.nextFile,
                 'Ctrl+N', 'next', 'Next image')
         next_person = action('&Next person', self.nextPerson,
-                'Ctrl+N+P', 'next_person', 'Next person')
+                'a', 'next_person', 'Next person')
         prev_person = action('&Prev person', self.prevPerson,
-                'Ctrl+B+P', 'prev_person', 'Prev person')
+                's', 'prev_person', 'Prev person')
         self.next = next
         self.next_person = next_person
         self.prev_person = prev_person
