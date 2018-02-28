@@ -98,7 +98,7 @@ class MainWindow(QMainWindow, WindowMixin):
         super(MainWindow, self).__init__()
         self.setWindowTitle(__appname__)
         self.datadir = '/mnt/c/Users/ljf_l/Desktop/newAnno'
-        with open(self.datadir+'/coco1.json') as data_file:
+        with open(self.datadir+'/annot.json') as data_file:
             self.annot = json.load(data_file)
             print("number of label set: %d" % len(self.annot))
         # Whether we need to save or not.
@@ -817,7 +817,7 @@ class MainWindow(QMainWindow, WindowMixin):
         #if PYQT5:
         #    filename, _ = filename
         #filename = str(filename)
-        self.dirname = self.datadir + '/coco1'
+        self.dirname = self.datadir + '/images'
         self.imglist = [ f for f in listdir(self.dirname) if isfile(join(self.dirname,f))]
         
         if os.path.exists(os.path.join(self.dirname, 'annotations', 'current.txt')):
@@ -873,11 +873,15 @@ class MainWindow(QMainWindow, WindowMixin):
             tmp['Head'] = False
             tmp['Empty'] = False
             self.labelDict['person_' + str(i + 1)] = tmp
+        
+        self.prev_person.setEnabled(False)
+        self.next_person.setEnabled(False)
         if self.person_id > 1:
             self.prev_person.setEnabled(True)
         if self.person_id < self.personNum:
             self.next_person.setEnabled(True)
         self.next.setEnabled(False)
+
         self.canvas.person_id =self.person_id
         self.loadFile(os.path.join(self.dirname, self.imglist[self.imgCnt]))
         self.setCreateMode()
