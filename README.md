@@ -54,6 +54,7 @@ self.datadir = '/mnt/c/Users/ljf_l/Desktop/newAnno'
 **Install**
 ```bash
 # Install
+$ pip uninstall labelme
 $ python setup.py install
 ```
 
