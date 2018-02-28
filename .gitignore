@@ -1,0 +1,8 @@
+.cache/
+build/
+dist/
+*.py[cdo]
+*.egg-info/
+
+icons/.DS_Store
+labelme/resources.py
