@@ -46,7 +46,7 @@ Usage
 
 **准备**
 
-下载解压`newAnno`文件夹，把文件夹路径复制到`labelme-master/labelme/app.py`的第100行。比如，我的路径是`/mnt/c/Users/ljf_l/Desktop/newAnno`，则修改如下
+下载解压`newAnno`文件夹，把文件夹路径复制到`labelKeypoint/labelme/app.py`的第100行。比如，我的路径是`/mnt/c/Users/ljf_l/Desktop/newAnno`，则修改如下
 ``` python
 self.datadir = '/mnt/c/Users/ljf_l/Desktop/newAnno'
 ```
