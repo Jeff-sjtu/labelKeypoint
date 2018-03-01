@@ -169,7 +169,7 @@ class MainWindow(QMainWindow, WindowMixin):
         open_file = action('&Open', self.openFile,
                 'Ctrl+O', 'open', 'Open image or label file')
         next = action('&Next', self.nextFile,
-                'Ctrl+N', 'next', 'Next image')
+                'Space', 'next', 'Next image')
         next_person = action('&Next person', self.nextPerson,
                 'a', 'next_person', 'Next person')
         prev_person = action('&Prev person', self.prevPerson,
