@@ -46,9 +46,9 @@ Usage
 
 **准备**
 
-下载解压`newAnno`文件夹，把文件夹路径复制到`labelKeypoint/labelme/app.py`的第100行。比如，我的路径是`/mnt/c/Users/ljf_l/Desktop/newAnno`，则修改如下
+下载解压[`coco_anno`](https://drive.google.com/file/d/1khGlIo6IMIqf1ib2AJXC4yYMkhb2E0q0/view?usp=sharing)文件夹，把文件夹路径复制到`labelKeypoint/labelme/app.py`的第100行。比如，我的路径是`/mnt/c/Users/ljf_l/Desktop/coco_anno`，则修改如下
 ``` python
-self.datadir = '/mnt/c/Users/ljf_l/Desktop/newAnno'
+self.datadir = '/mnt/c/Users/ljf_l/Desktop/coco_anno'
 ```
 
 **Install**
